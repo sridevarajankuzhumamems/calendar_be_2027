@@ -1,18 +1,68 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const fs = require('fs');
-const path = require('path');
 const crypto = require('crypto');
+const { google } = require('googleapis');
 
 const app = express();
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 
-// CSV file path
-const CSV_FILE = path.join(__dirname, 'users.csv');
+// Google Sheets Configuration
+const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
+const SHEET_NAME = 'Users';
 
-// Initialize CSV file with headers if it doesn't exist
-if (!fs.existsSync(CSV_FILE)) {
-  fs.writeFileSync(CSV_FILE, 'Token,Name,Email,Phone,Date\n');
+// Initialize Google Sheets API
+let sheets;
+
+async function initGoogleSheets() {
+  try {
+    const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
+    const auth = new google.auth.GoogleAuth({
+      credentials,
+      scopes: ['https://www.googleapis.com/auth/spreadsheets']
+    });
+    const authClient = await auth.getClient();
+    sheets = google.sheets({ version: 'v4', auth: authClient });
+
+    // Create header row if sheet is empty
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: SPREADSHEET_ID,
+      range: `${SHEET_NAME}!A1:E1`
+    });
+
+    if (!response.data.values || response.data.values.length === 0) {
+      await sheets.spreadsheets.values.append({
+        spreadsheetId: SPREADSHEET_ID,
+        range: `${SHEET_NAME}!A1`,
+        valueInputOption: 'RAW',
+        resource: { values: [['Token', 'Name', 'Email', 'Phone', 'Date']] }
+      });
+    }
+    console.log('Google Sheets connected successfully');
+  } catch (error) {
+    console.error('Error initializing Google Sheets:', error.message);
+  }
+}
+
+// Read all users from Google Sheets
+async function readUsers() {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: SPREADSHEET_ID,
+      range: `${SHEET_NAME}!A2:E`
+    });
+    const rows = response.data.values || [];
+    return rows.map(row => ({
+      token: row[0],
+      name: row[1],
+      email: row[2],
+      phone: row[3],
+      date: row[4]
+    }));
+  } catch (error) {
+    console.error('Error reading users:', error.message);
+    return [];
+  }
 }
 
 // Middleware
@@ -20,36 +70,19 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Helper function to escape CSV fields
-function escapeCsv(field) {
-  const str = String(field);
-  if (str.includes(',') || str.includes('"') || str.includes('\n')) {
-    return '"' + str.replace(/"/g, '""') + '"';
-  }
-  return str;
-}
-
-// Helper to read all users from CSV
-function readUsers() {
-  if (!fs.existsSync(CSV_FILE)) return [];
-  const csvContent = fs.readFileSync(CSV_FILE, 'utf-8');
-  const lines = csvContent.trim().split('\n');
-  return lines.slice(1).map(line => {
-    const values = line.split(',');
-    return { token: values[0], name: values[1], email: values[2], phone: values[3] };
-  });
-}
-
 // Root route
 app.get('/', (req, res) => {
   res.json({
-    message: 'User Registration API',
-    endpoint: 'POST /api/users - { name, email, phone }'
+    message: 'User Registration API with Google Sheets',
+    endpoints: {
+      register: 'POST /api/users - { name, email, phone }',
+      getUsers: 'GET /api/users'
+    }
   });
 });
 
-// API to save user data to CSV - returns token for localStorage
-app.post('/api/users', (req, res) => {
+// API to save user data to Google Sheets
+app.post('/api/users', async (req, res) => {
   try {
     const { name, email, phone } = req.body;
 
@@ -62,7 +95,7 @@ app.post('/api/users', (req, res) => {
     }
 
     // Check for unique email and phone
-    const users = readUsers();
+    const users = await readUsers();
     if (users.find(u => u.email === email)) {
       return res.status(400).json({
         success: false,
@@ -79,10 +112,14 @@ app.post('/api/users', (req, res) => {
     // Generate unique token for localStorage
     const token = crypto.randomBytes(16).toString('hex');
     const date = new Date().toISOString();
-    const csvRow = token + ',' + escapeCsv(name) + ',' + escapeCsv(email) + ',' + escapeCsv(phone) + ',' + date + '\n';
 
-    // Append to CSV file
-    fs.appendFileSync(CSV_FILE, csvRow);
+    // Append to Google Sheets
+    await sheets.spreadsheets.values.append({
+      spreadsheetId: SPREADSHEET_ID,
+      range: `${SHEET_NAME}!A:E`,
+      valueInputOption: 'RAW',
+      resource: { values: [[token, name, email, phone, date]] }
+    });
 
     res.status(201).json({
       success: true,
@@ -98,6 +135,19 @@ app.post('/api/users', (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log('Server running on http://localhost:' + PORT);
+// Get all users
+app.get('/api/users', async (req, res) => {
+  try {
+    const users = await readUsers();
+    res.json({ success: true, count: users.length, users });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Error reading users' });
+  }
+});
+
+// Initialize and start server
+initGoogleSheets().then(() => {
+  app.listen(PORT, () => {
+    console.log('Server running on http://localhost:' + PORT);
+  });
 });

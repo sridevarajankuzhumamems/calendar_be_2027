@@ -1,15 +1,17 @@
 {
   "name": "calendar-backend",
   "version": "1.0.0",
-  "description": "Simple user registration form with CSV storage",
+  "description": "User registration with Google Sheets storage",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
     "express": "^4.18.2",
-    "cors": "^2.8.5"
+    "googleapis": "^129.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
