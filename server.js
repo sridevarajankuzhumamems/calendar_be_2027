@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 5001;
 // Google Sheets Configuration
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 const SHEET_NAME = 'Users';
+const LOG_SHEET_NAME = 'Logs';
 
 // In-memory cache
 let usersCache = new Set();
@@ -93,18 +94,7 @@ app.post('/api/users', async (req, res) => {
     }
 
     const token = crypto.randomBytes(16).toString('hex');
-    // const date = new Date().toISOString();
-  const date = new Date().toLocaleString('en-IN', {
-    timeZone: 'Asia/Kolkata',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: 'numeric',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true
-  });
-
+    const date = new Date().toISOString();
 
     // Add to cache immediately
     usersCache.add(email);
@@ -134,6 +124,61 @@ app.post('/api/users', async (req, res) => {
     res.status(500).json({
       success: false,
       message: 'Error saving user'
+    });
+  }
+});
+
+// Activity logging
+app.post('/api/logs', async (req, res) => {
+  try {
+    const { name, email, phone } = req.body;
+
+    if (!name || !email || !phone) {
+      return res.status(400).json({
+        success: false,
+        message: 'Please provide name, email, and phone'
+      });
+    }
+
+    if (!await ensureInitialized()) {
+      return res.status(500).json({
+        success: false,
+        message: 'Service temporarily unavailable'
+      });
+    }
+
+    const timestamp = new Date().toLocaleString('en-IN', {
+      timeZone: 'Asia/Kolkata',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: 'numeric',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    });
+
+    // Send response first
+    res.status(201).json({
+      success: true,
+      message: 'Activity logged successfully!'
+    });
+
+    // Save to sheet in background
+    sheets.spreadsheets.values.append({
+      spreadsheetId: SPREADSHEET_ID,
+      range: `${LOG_SHEET_NAME}!A:D`,
+      valueInputOption: 'RAW',
+      resource: { values: [[name, email, phone, timestamp]] }
+    }).catch(err => {
+      console.error('Log save error:', err.message);
+    });
+
+  } catch (error) {
+    console.error('Log error:', error.message);
+    res.status(500).json({
+      success: false,
+      message: 'Error logging activity'
     });
   }
 });
