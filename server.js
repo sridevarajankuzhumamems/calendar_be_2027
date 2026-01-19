@@ -94,7 +94,16 @@ app.post('/api/users', async (req, res) => {
     }
 
     const token = crypto.randomBytes(16).toString('hex');
-    const date = new Date().toISOString();
+    const date = new Date().toLocaleString('en-IN', {
+      timeZone: 'Asia/Kolkata',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: 'numeric',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    });
 
     // Add to cache immediately
     usersCache.add(email);
