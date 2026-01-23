@@ -12,8 +12,8 @@ const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 const SHEET_NAME = 'Users';
 const LOG_SHEET_NAME = 'Logs';
 
-// In-memory cache
-let usersCache = new Set();
+// In-memory cache to track usage count
+let usersCache = new Map(); // Map<string, number> to store counts
 let sheets = null;
 let isInitialized = false;
 
@@ -38,8 +38,14 @@ async function ensureInitialized() {
 
     const rows = response.data.values || [];
     rows.forEach(row => {
-      if (row[0]) usersCache.add(row[0]); // email
-      if (row[1]) usersCache.add(row[1]); // phone
+      if (row[0]) {
+        const email = row[0];
+        usersCache.set(email, (usersCache.get(email) || 0) + 1);
+      }
+      if (row[1]) {
+        const phone = row[1];
+        usersCache.set(phone, (usersCache.get(phone) || 0) + 1);
+      }
     });
 
     isInitialized = true;
@@ -53,6 +59,7 @@ async function ensureInitialized() {
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.set('trust proxy', true); // Trust proxy for IP extraction
 
 // Root route
 app.get('/', (req, res) => {
@@ -79,17 +86,20 @@ app.post('/api/users', async (req, res) => {
       });
     }
 
-    // Fast uniqueness check using Set
-    if (usersCache.has(email)) {
+    // Check usage limits (allow up to 2 times)
+    const emailCount = usersCache.get(email) || 0;
+    const phoneCount = usersCache.get(phone) || 0;
+
+    if (emailCount >= 2) {
       return res.status(400).json({
         success: false,
-        message: 'Email already registered'
+        message: 'Email has reached the maximum registration limit (2)'
       });
     }
-    if (usersCache.has(phone)) {
+    if (phoneCount >= 2) {
       return res.status(400).json({
         success: false,
-        message: 'Phone number already registered'
+        message: 'Phone number has reached the maximum registration limit (2)'
       });
     }
 
@@ -105,9 +115,12 @@ app.post('/api/users', async (req, res) => {
       hour12: true
     });
 
-    // Add to cache immediately
-    usersCache.add(email);
-    usersCache.add(phone);
+    // Capture IP Address
+    const ip = req.ip || req.connection.remoteAddress;
+
+    // Increment counts immediately
+    usersCache.set(email, emailCount + 1);
+    usersCache.set(phone, phoneCount + 1);
 
     // Send response first
     res.status(201).json({
@@ -119,13 +132,14 @@ app.post('/api/users', async (req, res) => {
     // Save to sheet in background
     sheets.spreadsheets.values.append({
       spreadsheetId: SPREADSHEET_ID,
-      range: `${SHEET_NAME}!A:E`,
+      range: `${SHEET_NAME}!A:F`, // Expanded range for IP
       valueInputOption: 'RAW',
-      resource: { values: [[token, name, email, phone, date]] }
+      resource: { values: [[token, name, email, phone, date, ip]] }
     }).catch(err => {
       console.error('Save error:', err.message);
-      usersCache.delete(email);
-      usersCache.delete(phone);
+      // Rollback counts on failure (optional, but good for consistency)
+      usersCache.set(email, usersCache.get(email) - 1);
+      usersCache.set(phone, usersCache.get(phone) - 1);
     });
 
   } catch (error) {
