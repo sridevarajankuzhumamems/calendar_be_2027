@@ -181,6 +181,9 @@ app.post('/api/logs', async (req, res) => {
       hour12: true
     });
 
+    // Capture IP Address
+    const ip = req.ip || req.connection.remoteAddress;
+
     // Send response first
     res.status(201).json({
       success: true,
@@ -190,9 +193,9 @@ app.post('/api/logs', async (req, res) => {
     // Save to sheet in background
     sheets.spreadsheets.values.append({
       spreadsheetId: SPREADSHEET_ID,
-      range: `${LOG_SHEET_NAME}!A:D`,
+      range: `${LOG_SHEET_NAME}!A:E`,
       valueInputOption: 'RAW',
-      resource: { values: [[name, email, phone, timestamp]] }
+      resource: { values: [[name, email, phone, timestamp, ip]] }
     }).catch(err => {
       console.error('Log save error:', err.message);
     });
