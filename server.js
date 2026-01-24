@@ -66,6 +66,25 @@ app.get('/', (req, res) => {
   res.json({ message: 'API is running' });
 });
 
+// Admins exempt from limits
+const ADMIN_EMAILS = new Set([
+  'plssv6896@gmail.com',
+  'nagarajanchandrasekar1973@gmail.com',
+  'venkataramanankm@gmail.com',
+  'kesavaraman2002@gmail.com',
+  'arunarun23602@gmail.com',
+  'brsridharan15@gmail.com'
+]);
+
+const ADMIN_PHONES = new Set([
+  '6384625665',
+  '9342870117',
+  '6369999091',
+  '8300686349',
+  '9488517403',
+  '9150902897'
+]);
+
 // Register user
 app.post('/api/users', async (req, res) => {
   try {
@@ -86,17 +105,20 @@ app.post('/api/users', async (req, res) => {
       });
     }
 
-    // Check usage limits (allow up to 2 times)
+    // Check usage limits (allow up to 2 times), unless admin
     const emailCount = usersCache.get(email) || 0;
     const phoneCount = usersCache.get(phone) || 0;
 
-    if (emailCount >= 2) {
+    const isEmailExempt = ADMIN_EMAILS.has(email);
+    const isPhoneExempt = ADMIN_PHONES.has(phone);
+
+    if (emailCount >= 2 && !isEmailExempt) {
       return res.status(400).json({
         success: false,
         message: 'Email has reached the maximum registration limit (2)'
       });
     }
-    if (phoneCount >= 2) {
+    if (phoneCount >= 2 && !isPhoneExempt) {
       return res.status(400).json({
         success: false,
         message: 'Phone number has reached the maximum registration limit (2)'
