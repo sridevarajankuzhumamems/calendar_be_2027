@@ -85,15 +85,57 @@ const ADMIN_PHONES = new Set([
   '9150902897'
 ]);
 
+// Validation Helper
+function validateRegistrationInput(name, email, phone) {
+  // Mobile Validation
+  const phoneStr = String(phone).trim();
+  
+  // 1. Basic Format (10 digits)
+  if (!/^\d{10}$/.test(phoneStr)) {
+    return "Phone number must be exactly 10 digits.";
+  }
+
+  // 2. Indian Prefix (6, 7, 8, 9)
+  if (!/^[6-9]/.test(phoneStr)) {
+    return "Phone number must start with 6, 7, 8, or 9.";
+  }
+
+  // 3. Repeated Characters (e.g., 9999999999)
+  if (/^(\d)\1{9}$/.test(phoneStr)) {
+     return "Invalid phone number: Cannot be all same digits.";
+  }
+  
+  // 4. Sequential Ascending/Descending (e.g., 1234567890, 9876543210)
+  const asc = "01234567890123456789";
+  const desc = "98765432109876543210";
+  if (asc.includes(phoneStr) || desc.includes(phoneStr)) {
+      return "Invalid phone number: Cannot be a simple sequence.";
+  }
+
+  // Email Validation
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!email || !emailRegex.test(String(email).trim())) {
+    return "Invalid email address format.";
+  }
+  
+  // Name Validation
+  if (!name || name.trim().length < 3) {
+      return "Name must be at least 3 characters long.";
+  }
+
+  return null; // Valid
+}
+
 // Register user
 app.post('/api/users', async (req, res) => {
   try {
     const { name, email, phone } = req.body;
 
-    if (!name || !email || !phone) {
+    const validationError = validateRegistrationInput(name, email, phone);
+    if (validationError) {
       return res.status(400).json({
         success: false,
-        message: 'Please provide name, email, and phone'
+        message: validationError
       });
     }
 
@@ -178,10 +220,11 @@ app.post('/api/logs', async (req, res) => {
   try {
     const { name, email, phone } = req.body;
 
-    if (!name || !email || !phone) {
+    const validationError = validateRegistrationInput(name, email, phone);
+    if (validationError) {
       return res.status(400).json({
         success: false,
-        message: 'Please provide name, email, and phone'
+        message: validationError
       });
     }
 
