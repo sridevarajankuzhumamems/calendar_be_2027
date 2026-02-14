@@ -106,16 +106,16 @@ const ADMIN_PHONES = new Set([
 const ADMIN_SDK_IDS = new Map([
   ['srinivasandevanathan@gmail.com', 'SDK00007'],
   ['9597788441', 'SDK00007'],
-  ['plssv6896@gmail.com', 'SDK00006'],
-  ['6384625665', 'SDK00006'],
+  ['plssv6896@gmail.com', 'SDK00002'],
+  ['6384625665', 'SDK00002'],
   ['nagarajanchandrasekar1973@gmail.com', 'SDK00005'],
   ['9342870117', 'SDK00005'],
   ['venkataramanankm@gmail.com', 'SDK00004'],
   ['6369999091', 'SDK00004'],
   ['kesavaraman2002@gmail.com', 'SDK00003'],
   ['8300686349', 'SDK00003'],
-  ['arunarun23602@gmail.com', 'SDK00002'],
-  ['9488517403', 'SDK00002'],
+  ['arunarun23602@gmail.com', 'SDK00006'],
+  ['9488517403', 'SDK00006'],
   ['brsridharan15@gmail.com', 'SDK00001'],
   ['9150902897', 'SDK00001'],
   ['srivaratharajaperumal@gmail.com', 'SDK00000'],
@@ -276,7 +276,7 @@ app.post('/api/users', async (req, res) => {
 // Activity logging
 app.post('/api/logs', async (req, res) => {
   try {
-    const { name, email, phone } = req.body;
+    const { name, email, phone, sdkId } = req.body;
 
     const validationError = validateRegistrationInput(name, email, phone);
     if (validationError) {
