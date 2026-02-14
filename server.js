@@ -254,7 +254,7 @@ app.post('/api/users', async (req, res) => {
     // Save to sheet in background (SDK ID is first column now)
     sheets.spreadsheets.values.append({
       spreadsheetId: SPREADSHEET_ID,
-      range: `${SHEET_NAME}!A:G`,
+      range: `${SHEET_NAME}!B:H`,
       valueInputOption: 'RAW',
       resource: { values: [[sdkId, token, name, email, phone, date, ip]] }
     }).catch(err => {
@@ -316,7 +316,7 @@ app.post('/api/logs', async (req, res) => {
     // Save to sheet in background
     sheets.spreadsheets.values.append({
       spreadsheetId: SPREADSHEET_ID,
-      range: `${LOG_SHEET_NAME}!A:E`,
+      range: `${LOG_SHEET_NAME}!B:F`,
       valueInputOption: 'RAW',
       resource: { values: [[name, email, phone, timestamp, ip, sdkId]] }
     }).catch(err => {
