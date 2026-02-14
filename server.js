@@ -318,7 +318,7 @@ app.post('/api/logs', async (req, res) => {
       spreadsheetId: SPREADSHEET_ID,
       range: `${LOG_SHEET_NAME}!A:E`,
       valueInputOption: 'RAW',
-      resource: { values: [[name, email, phone, timestamp, ip]] }
+      resource: { values: [[name, email, phone, timestamp, ip, sdkId]] }
     }).catch(err => {
       console.error('Log save error:', err.message);
     });
