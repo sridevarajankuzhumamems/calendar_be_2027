@@ -123,7 +123,7 @@ const ADMIN_SDK_IDS = new Map([
 ]);
 
 // SDK ID counter (starts at 7, since 1-6 are reserved for admins)
-let sdkCounter = 7;
+let sdkCounter = 8;
 
 function generateSDKId(email, phone) {
   // Check if admin - return reserved ID
