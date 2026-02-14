@@ -30,23 +30,36 @@ async function ensureInitialized() {
     const authClient = await auth.getClient();
     sheets = google.sheets({ version: 'v4', auth: authClient });
 
-    // Load existing emails and phones into cache
+    // Load existing data to initialize cache and SDK counter
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: SPREADSHEET_ID,
-      range: `${SHEET_NAME}!C2:D`
+      range: `${SHEET_NAME}!A2:D`
     });
 
     const rows = response.data.values || [];
+
+    // Find max SDK ID to resume counter
+    let maxSdkNum = 6; // Start from 6 since 1-6 are reserved for admins
+
     rows.forEach(row => {
-      if (row[0]) {
-        const email = row[0];
+      // row[0] is SDK ID, row[2] is email, row[3] is phone
+      if (row[0] && row[0].startsWith('SDK')) {
+        const num = parseInt(row[0].replace('SDK', ''));
+        if (num > maxSdkNum) maxSdkNum = num;
+      }
+
+      if (row[2]) {
+        const email = row[2];
         usersCache.set(email, (usersCache.get(email) || 0) + 1);
       }
-      if (row[1]) {
-        const phone = row[1];
+      if (row[3]) {
+        const phone = row[3];
         usersCache.set(phone, (usersCache.get(phone) || 0) + 1);
       }
     });
+
+    // Set counter to next available ID
+    sdkCounter = maxSdkNum + 1;
 
     isInitialized = true;
     return true;
@@ -73,7 +86,9 @@ const ADMIN_EMAILS = new Set([
   'venkataramanankm@gmail.com',
   'kesavaraman2002@gmail.com',
   'arunarun23602@gmail.com',
-  'brsridharan15@gmail.com'
+  'brsridharan15@gmail.com',
+  'srinivasandevanathan@gmail.com',
+  'srivaratharajaperumal@gmail.com'
 ]);
 
 const ADMIN_PHONES = new Set([
@@ -82,14 +97,55 @@ const ADMIN_PHONES = new Set([
   '6369999091',
   '8300686349',
   '9488517403',
-  '9150902897'
+  '9150902897',
+  '9597788441',
+  '9876125690'
 ]);
+
+// Map admin emails/phones to reserved SDK IDs (SDK00001 - SDK00006)
+const ADMIN_SDK_IDS = new Map([
+  ['srinivasandevanathan@gmail.com', 'SDK00007'],
+  ['9597788441', 'SDK00007'],
+  ['plssv6896@gmail.com', 'SDK00006'],
+  ['6384625665', 'SDK00006'],
+  ['nagarajanchandrasekar1973@gmail.com', 'SDK00005'],
+  ['9342870117', 'SDK00005'],
+  ['venkataramanankm@gmail.com', 'SDK00004'],
+  ['6369999091', 'SDK00004'],
+  ['kesavaraman2002@gmail.com', 'SDK00003'],
+  ['8300686349', 'SDK00003'],
+  ['arunarun23602@gmail.com', 'SDK00002'],
+  ['9488517403', 'SDK00002'],
+  ['brsridharan15@gmail.com', 'SDK00001'],
+  ['9150902897', 'SDK00001'],
+  ['srivaratharajaperumal@gmail.com', 'SDK00000'],
+  ['9876125690', 'SDK00000']
+]);
+
+// SDK ID counter (starts at 7, since 1-6 are reserved for admins)
+let sdkCounter = 7;
+
+function generateSDKId(email, phone) {
+  // Check if admin - return reserved ID
+  if (ADMIN_SDK_IDS.has(email)) {
+    return ADMIN_SDK_IDS.get(email);
+  }
+  if (ADMIN_SDK_IDS.has(phone)) {
+    return ADMIN_SDK_IDS.get(phone);
+  }
+
+  // Generate new ID for regular users
+  const id = `SDK${String(sdkCounter).padStart(5, '0')}`;
+  sdkCounter++;
+  return id;
+}
+
 
 // Validation Helper
 function validateRegistrationInput(name, email, phone) {
   // Mobile Validation
   const phoneStr = String(phone).trim();
-  
+
   // 1. Basic Format (10 digits)
   if (!/^\d{10}$/.test(phoneStr)) {
     return "Phone number must be exactly 10 digits.";
@@ -102,14 +158,14 @@ function validateRegistrationInput(name, email, phone) {
 
   // 3. Repeated Characters (e.g., 9999999999)
   if (/^(\d)\1{9}$/.test(phoneStr)) {
-     return "Invalid phone number: Cannot be all same digits.";
+    return "Invalid phone number: Cannot be all same digits.";
   }
-  
+
   // 4. Sequential Ascending/Descending (e.g., 1234567890, 9876543210)
   const asc = "01234567890123456789";
   const desc = "98765432109876543210";
   if (asc.includes(phoneStr) || desc.includes(phoneStr)) {
-      return "Invalid phone number: Cannot be a simple sequence.";
+    return "Invalid phone number: Cannot be a simple sequence.";
   }
 
   // Email Validation
@@ -117,10 +173,10 @@ function validateRegistrationInput(name, email, phone) {
   if (!email || !emailRegex.test(String(email).trim())) {
     return "Invalid email address format.";
   }
-  
+
   // Name Validation
   if (!name || name.trim().length < 3) {
-      return "Name must be at least 3 characters long.";
+    return "Name must be at least 3 characters long.";
   }
 
   return null; // Valid
@@ -168,6 +224,7 @@ app.post('/api/users', async (req, res) => {
     }
 
     const token = crypto.randomBytes(16).toString('hex');
+    const sdkId = generateSDKId(email, phone);
     const date = new Date().toLocaleString('en-IN', {
       timeZone: 'Asia/Kolkata',
       year: 'numeric',
@@ -190,18 +247,19 @@ app.post('/api/users', async (req, res) => {
     res.status(201).json({
       success: true,
       message: 'User registered successfully!',
-      token: token
+      token: token,
+      sdkId: sdkId
     });
 
-    // Save to sheet in background
+    // Save to sheet in background (SDK ID is first column now)
     sheets.spreadsheets.values.append({
       spreadsheetId: SPREADSHEET_ID,
-      range: `${SHEET_NAME}!A:F`, // Expanded range for IP
+      range: `${SHEET_NAME}!A:G`,
       valueInputOption: 'RAW',
-      resource: { values: [[token, name, email, phone, date, ip]] }
+      resource: { values: [[sdkId, token, name, email, phone, date, ip]] }
     }).catch(err => {
       console.error('Save error:', err.message);
-      // Rollback counts on failure (optional, but good for consistency)
+      // Rollback counts on failure
       usersCache.set(email, usersCache.get(email) - 1);
       usersCache.set(phone, usersCache.get(phone) - 1);
     });
