@@ -1,0 +1,1711 @@
+{
+  "0": {
+    "days": {
+      "1": {
+        "year": 2027,
+        "month": 0,
+        "day": 1,
+        "dayOfWeek": 5,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 17
+        },
+        "tithiList": [
+          {
+            "name": "பிரதமை",
+            "startTime": "7.00 pm",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/cal-1794297200829-460947738.png",
+        "secondaryImage": "",
+        "imageArray": [
+          "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/cal-1794297200829-460947738.png"
+        ],
+        "leftImage": "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/cal-1794297200829-460947738.png",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "10:30 AM - 12:00 PM",
+          "yamagandam": "3:00 PM - 4:30 PM",
+          "kuligai": "7:30 AM - 9:00 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T09:47:00.779Z"
+      },
+      "2": {
+        "year": 2027,
+        "month": 0,
+        "day": 2,
+        "dayOfWeek": 6,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 18
+        },
+        "tithiList": [
+          {
+            "name": "பிரதமை",
+            "startTime": "",
+            "endTime": "3.45 AM",
+            "isAmavasai": false,
+            "isPournami": false
+          },
+          {
+            "name": "துவிதியை",
+            "startTime": "3.46 AM",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/1795342585526_Screenshot_2026-11-12_110357.png",
+        "secondaryImage": "",
+        "imageArray": [
+          "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/1795342585526_Screenshot_2026-11-12_110357.png"
+        ],
+        "leftImage": "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/1795342585526_Screenshot_2026-11-12_110357.png",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "9:00 AM - 10:30 AM",
+          "yamagandam": "1:30 PM - 3:00 PM",
+          "kuligai": "6:00 AM - 7:30 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-22T10:16:32.394Z"
+      },
+      "3": {
+        "year": 2027,
+        "month": 0,
+        "day": 3,
+        "dayOfWeek": 0,
+        "isSunday": true,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 19
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "4:30 PM - 6:00 PM",
+          "yamagandam": "12:00 PM - 1:30 PM",
+          "kuligai": "3:00 PM - 4:30 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.859Z"
+      },
+      "4": {
+        "year": 2027,
+        "month": 0,
+        "day": 4,
+        "dayOfWeek": 1,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 20
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "7:30 AM - 9:00 AM",
+          "yamagandam": "10:30 AM - 12:00 PM",
+          "kuligai": "1:30 PM - 3:00 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.859Z"
+      },
+      "5": {
+        "year": 2027,
+        "month": 0,
+        "day": 5,
+        "dayOfWeek": 2,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 21
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "3:00 PM - 4:30 PM",
+          "yamagandam": "9:00 AM - 10:30 AM",
+          "kuligai": "12:00 PM - 1:30 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.859Z"
+      },
+      "6": {
+        "year": 2027,
+        "month": 0,
+        "day": 6,
+        "dayOfWeek": 3,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 22
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "12:00 PM - 1:30 PM",
+          "yamagandam": "7:30 AM - 9:00 AM",
+          "kuligai": "10:30 AM - 12:00 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.859Z"
+      },
+      "7": {
+        "year": 2027,
+        "month": 0,
+        "day": 7,
+        "dayOfWeek": 4,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 23
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "1:30 PM - 3:00 PM",
+          "yamagandam": "6:00 AM - 7:30 AM",
+          "kuligai": "9:00 AM - 10:30 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.859Z"
+      },
+      "8": {
+        "year": 2027,
+        "month": 0,
+        "day": 8,
+        "dayOfWeek": 5,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 24
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "10:30 AM - 12:00 PM",
+          "yamagandam": "3:00 PM - 4:30 PM",
+          "kuligai": "7:30 AM - 9:00 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.859Z"
+      },
+      "9": {
+        "year": 2027,
+        "month": 0,
+        "day": 9,
+        "dayOfWeek": 6,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 25
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "9:00 AM - 10:30 AM",
+          "yamagandam": "1:30 PM - 3:00 PM",
+          "kuligai": "6:00 AM - 7:30 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.859Z"
+      },
+      "10": {
+        "year": 2027,
+        "month": 0,
+        "day": 10,
+        "dayOfWeek": 0,
+        "isSunday": true,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 26
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "4:30 PM - 6:00 PM",
+          "yamagandam": "12:00 PM - 1:30 PM",
+          "kuligai": "3:00 PM - 4:30 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.859Z"
+      },
+      "11": {
+        "year": 2027,
+        "month": 0,
+        "day": 11,
+        "dayOfWeek": 1,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 27
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "7:30 AM - 9:00 AM",
+          "yamagandam": "10:30 AM - 12:00 PM",
+          "kuligai": "1:30 PM - 3:00 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.859Z"
+      },
+      "12": {
+        "year": 2027,
+        "month": 0,
+        "day": 12,
+        "dayOfWeek": 2,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 28
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "3:00 PM - 4:30 PM",
+          "yamagandam": "9:00 AM - 10:30 AM",
+          "kuligai": "12:00 PM - 1:30 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.859Z"
+      },
+      "13": {
+        "year": 2027,
+        "month": 0,
+        "day": 13,
+        "dayOfWeek": 3,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 29
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "12:00 PM - 1:30 PM",
+          "yamagandam": "7:30 AM - 9:00 AM",
+          "kuligai": "10:30 AM - 12:00 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.859Z"
+      },
+      "14": {
+        "year": 2027,
+        "month": 0,
+        "day": 14,
+        "dayOfWeek": 4,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "மார்கழி",
+          "day": 30
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [
+          "தை பொங்கல்"
+        ],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "1:30 PM - 3:00 PM",
+          "yamagandam": "6:00 AM - 7:30 AM",
+          "kuligai": "9:00 AM - 10:30 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.859Z"
+      },
+      "15": {
+        "year": 2027,
+        "month": 0,
+        "day": 15,
+        "dayOfWeek": 5,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 1
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "10:30 AM - 12:00 PM",
+          "yamagandam": "3:00 PM - 4:30 PM",
+          "kuligai": "7:30 AM - 9:00 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T09:42:44.510Z"
+      },
+      "16": {
+        "year": 2027,
+        "month": 0,
+        "day": 16,
+        "dayOfWeek": 6,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 1
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "9:00 AM - 10:30 AM",
+          "yamagandam": "1:30 PM - 3:00 PM",
+          "kuligai": "6:00 AM - 7:30 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "17": {
+        "year": 2027,
+        "month": 0,
+        "day": 17,
+        "dayOfWeek": 0,
+        "isSunday": true,
+        "tamilDate": {
+          "month": "தை",
+          "day": 2
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "4:30 PM - 6:00 PM",
+          "yamagandam": "12:00 PM - 1:30 PM",
+          "kuligai": "3:00 PM - 4:30 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "18": {
+        "year": 2027,
+        "month": 0,
+        "day": 18,
+        "dayOfWeek": 1,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 3
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "7:30 AM - 9:00 AM",
+          "yamagandam": "10:30 AM - 12:00 PM",
+          "kuligai": "1:30 PM - 3:00 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "19": {
+        "year": 2027,
+        "month": 0,
+        "day": 19,
+        "dayOfWeek": 2,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 4
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "3:00 PM - 4:30 PM",
+          "yamagandam": "9:00 AM - 10:30 AM",
+          "kuligai": "12:00 PM - 1:30 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "20": {
+        "year": 2027,
+        "month": 0,
+        "day": 20,
+        "dayOfWeek": 3,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 5
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "12:00 PM - 1:30 PM",
+          "yamagandam": "7:30 AM - 9:00 AM",
+          "kuligai": "10:30 AM - 12:00 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "21": {
+        "year": 2027,
+        "month": 0,
+        "day": 21,
+        "dayOfWeek": 4,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 6
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "1:30 PM - 3:00 PM",
+          "yamagandam": "6:00 AM - 7:30 AM",
+          "kuligai": "9:00 AM - 10:30 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "22": {
+        "year": 2027,
+        "month": 0,
+        "day": 22,
+        "dayOfWeek": 5,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 7
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "10:30 AM - 12:00 PM",
+          "yamagandam": "3:00 PM - 4:30 PM",
+          "kuligai": "7:30 AM - 9:00 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "23": {
+        "year": 2027,
+        "month": 0,
+        "day": 23,
+        "dayOfWeek": 6,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 8
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "9:00 AM - 10:30 AM",
+          "yamagandam": "1:30 PM - 3:00 PM",
+          "kuligai": "6:00 AM - 7:30 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "24": {
+        "year": 2027,
+        "month": 0,
+        "day": 24,
+        "dayOfWeek": 0,
+        "isSunday": true,
+        "tamilDate": {
+          "month": "தை",
+          "day": 9
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "4:30 PM - 6:00 PM",
+          "yamagandam": "12:00 PM - 1:30 PM",
+          "kuligai": "3:00 PM - 4:30 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "25": {
+        "year": 2027,
+        "month": 0,
+        "day": 25,
+        "dayOfWeek": 1,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 10
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "7:30 AM - 9:00 AM",
+          "yamagandam": "10:30 AM - 12:00 PM",
+          "kuligai": "1:30 PM - 3:00 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "26": {
+        "year": 2027,
+        "month": 0,
+        "day": 26,
+        "dayOfWeek": 2,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 11
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "3:00 PM - 4:30 PM",
+          "yamagandam": "9:00 AM - 10:30 AM",
+          "kuligai": "12:00 PM - 1:30 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "27": {
+        "year": 2027,
+        "month": 0,
+        "day": 27,
+        "dayOfWeek": 3,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 12
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "12:00 PM - 1:30 PM",
+          "yamagandam": "7:30 AM - 9:00 AM",
+          "kuligai": "10:30 AM - 12:00 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "28": {
+        "year": 2027,
+        "month": 0,
+        "day": 28,
+        "dayOfWeek": 4,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 13
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "1:30 PM - 3:00 PM",
+          "yamagandam": "6:00 AM - 7:30 AM",
+          "kuligai": "9:00 AM - 10:30 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "29": {
+        "year": 2027,
+        "month": 0,
+        "day": 29,
+        "dayOfWeek": 5,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 14
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "10:30 AM - 12:00 PM",
+          "yamagandam": "3:00 PM - 4:30 PM",
+          "kuligai": "7:30 AM - 9:00 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "30": {
+        "year": 2027,
+        "month": 0,
+        "day": 30,
+        "dayOfWeek": 6,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "தை",
+          "day": 15
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "9:00 AM - 10:30 AM",
+          "yamagandam": "1:30 PM - 3:00 PM",
+          "kuligai": "6:00 AM - 7:30 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      },
+      "31": {
+        "year": 2027,
+        "month": 0,
+        "day": 31,
+        "dayOfWeek": 0,
+        "isSunday": true,
+        "tamilDate": {
+          "month": "தை",
+          "day": 16
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "",
+        "secondaryImage": "",
+        "imageArray": [],
+        "leftImage": "",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "4:30 PM - 6:00 PM",
+          "yamagandam": "12:00 PM - 1:30 PM",
+          "kuligai": "3:00 PM - 4:30 PM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": true,
+        "updatedAt": "2026-11-10T07:53:06.860Z"
+      }
+    }
+  },
+  "1": {
+    "days": {
+      "5": {
+        "year": 2027,
+        "month": 1,
+        "day": 5,
+        "dayOfWeek": 5,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "",
+          "day": null
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/cal-1794297430964-107933245.jpeg",
+        "secondaryImage": "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/cal-1794304155228-579715765.jpeg",
+        "imageArray": [
+          "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/cal-1794297430964-107933245.jpeg",
+          "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/cal-1794304155228-579715765.jpeg"
+        ],
+        "leftImage": "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/cal-1794297430964-107933245.jpeg",
+        "gridImage": "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/cal-1794304155228-579715765.jpeg",
+        "rahukalam": {
+          "rahukalam": "10:30 AM - 12:00 PM",
+          "yamagandam": "3:00 PM - 4:30 PM",
+          "kuligai": "7:30 AM - 9:00 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": false,
+        "updatedAt": "2026-11-10T09:49:18.051Z"
+      },
+      "6": {
+        "year": 2027,
+        "month": 1,
+        "day": 6,
+        "dayOfWeek": 6,
+        "isSunday": false,
+        "tamilDate": {
+          "month": "",
+          "day": null
+        },
+        "tithiList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": "",
+            "isAmavasai": false,
+            "isPournami": false
+          }
+        ],
+        "nakshatraList": [
+          {
+            "name": "",
+            "startTime": "",
+            "endTime": ""
+          }
+        ],
+        "events": [],
+        "dayType": "NORMAL",
+        "isGovtHoliday": false,
+        "image": "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/cal-1794304194215-974457796.png",
+        "secondaryImage": "",
+        "imageArray": [
+          "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/cal-1794304194215-974457796.png"
+        ],
+        "leftImage": "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/sdk_images_2027/downloads/cal-1794304194215-974457796.png",
+        "gridImage": "",
+        "rahukalam": {
+          "rahukalam": "9:00 AM - 10:30 AM",
+          "yamagandam": "1:30 PM - 3:00 PM",
+          "kuligai": "6:00 AM - 7:30 AM"
+        },
+        "nallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "gowriNallaNeram": {
+          "morning": "",
+          "evening": ""
+        },
+        "notes": "",
+        "isFilled": false,
+        "updatedAt": "2026-11-10T09:49:55.269Z"
+      }
+    }
+  }
+}

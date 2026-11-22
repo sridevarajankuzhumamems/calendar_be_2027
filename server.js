@@ -2,7 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const crypto = require('crypto');
+const path = require('path');
 const { google } = require('googleapis');
+const calendarRoutes = require('./calendarRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -73,6 +75,12 @@ async function ensureInitialized() {
 app.use(cors());
 app.use(express.json());
 app.set('trust proxy', true); // Trust proxy for IP extraction
+
+// Static files for uploaded images
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// Calendar API routes
+app.use('/api/calendar', calendarRoutes);
 
 // Root route
 app.get('/', (req, res) => {
